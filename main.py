@@ -31,4 +31,8 @@ if __name__ == "__main__":
         input_df = pd.read_csv(args.input)
 
     doduo = Doduo(args)
-    annotated_df = doduo.annotate_columns(input_df)
+    adf = doduo.annotate_columns(input_df)
+    print(adf.df.to_markdown())
+    print(adf.colemb)
+    print(adf.coltypes)
+    print(adf.colrels)
